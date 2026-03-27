@@ -14,7 +14,7 @@ const ComandasPages = () => {
     return (
         <div>
             <h1>Toma de Comandas</h1>
-            
+
             {/* Selector de mesa basado en tu mesasMock [cite: 891] */}
             <label>Selecciona una mesa: </label>
             <select value={mesaSeleccionada} onChange={manejarCambioMesa}>

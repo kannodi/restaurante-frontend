@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 function MesaCard({ numero, capacidad, estado, comensales }) {
   return (
-    <div>
+    <div >
       <h2>Mesa {numero}</h2>
       <p>Capacidad: {capacidad}</p>
       <p>Comensales: {comensales}</p>

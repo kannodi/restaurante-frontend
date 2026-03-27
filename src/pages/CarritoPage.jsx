@@ -67,7 +67,7 @@ export default function CarritoPage() {
 
     return (
         <div>
-            <h2>Armar Comanda</h2>
+            <h2 className='text-red-500'>Armar Comanda</h2>
             {platos.map(plato => (
                 <div key={plato._id}>
                     <span>{plato.nombre} — S/ {plato.precio}</span>

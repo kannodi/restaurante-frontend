@@ -1,5 +1,5 @@
 
-function PlatoCard ({nombre, categoria, precio, stock, disponible}){
+function PlatoCard({ nombre, categoria, precio, stock, disponible }) {
     return (
         <li>
             <h2>{nombre}</h2>
@@ -12,4 +12,4 @@ function PlatoCard ({nombre, categoria, precio, stock, disponible}){
 
 }
 
-export  default PlatoCard
+export default PlatoCard

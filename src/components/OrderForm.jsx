@@ -50,7 +50,7 @@ const OrderForm = ({ mesaNumero }) => {
         // El JSX es idéntico — solo cambia this.props por mesaNumero
         // y this.state.plato por plato, this.state.enviando por enviando, etc.
         <form onSubmit={handleSubmit}>
-            <h2>Comanda — Mesa {mesaNumero}</h2>
+            <h2 >Comanda — Mesa {mesaNumero}</h2>
 
             <input
                 name="plato"
