@@ -6,8 +6,8 @@ import CarritoPage from './pages/CarritoPage'
 function App() {
   return (
     <div>
-      <CarritoPage />
       <NavBar />
+      <CarritoPage />
       <Home />
       <MesasPage />
       <ComandasPages />

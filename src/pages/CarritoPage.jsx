@@ -66,7 +66,7 @@ export default function CarritoPage() {
     //const total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
 
     return (
-        <div>
+        <div className='border-2 border-red-500' margin-top='10px'>
             <h2 className='text-red-500'>Armar Comanda</h2>
             {platos.map(plato => (
                 <div key={plato._id}>
