@@ -25,8 +25,8 @@ export default function CarritoPage() {
         cargarDatos();
     }, []);
 
-    if (loading) return <p>Cargando menú...</p>;
-    if (error) return <p>Error: {error} — verifica que el backend está corriendo.</p>;
+    if (loading) return <p className='text-blue-500 animate-pulse m-4'>Cargando la carrito...</p>;
+    if (error) return <p className='bg-red-100 text-red-500 m-4'>Error: {error}</p>;
 
 
     function agregarPlato(plato) {

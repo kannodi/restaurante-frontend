@@ -21,8 +21,8 @@ export default function MenuPage() {
         cargarMenu();
     }, []);
 
-    if (loading) return <p className='text-blue-500 animate-pulse'>Cargando el menú del restaurante...</p>;
-    if (error) return <p className='bg-red-100 text-red-500'>Error: {error} — verifica que el backend está corriendo.</p>;
+    if (loading) return <p className='text-blue-500 animate-pulse m-4'>Cargando el menú del restaurante...</p>;
+    if (error) return <p className='bg-red-100 text-red-500 m-4'>Error: {error} — verifica que el backend está corriendo.</p>;
 
     return (
         <div className="bg-gray-50 p-6 rounded-lg m-4 flex flex-col gap-2 ">
