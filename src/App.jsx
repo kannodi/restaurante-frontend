@@ -1,4 +1,4 @@
-import Home from './pages/Home'
+import CartaPage from './pages/CartaPage'
 import MesasPage from './pages/MesasPage'
 import NavBar from './components/NavBar'
 import ComandasPages from './pages/ComandasPage'
@@ -8,9 +8,9 @@ function App() {
   return (
     <div>
       <NavBar />
+      <CartaPage />
       <MenuPage />
       <CarritoPage />
-      <Home />
       <MesasPage />
       <ComandasPages />
     </div>

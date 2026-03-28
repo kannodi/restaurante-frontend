@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import PlatoCard from '../components/PlatoCard';
 import { getPlatos } from '../services/api';
 
-function Home() {
+function CartaPage() {
   const [platos, setPlatos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -43,4 +43,4 @@ function Home() {
   )
 }
 
-export default Home
+export default CartaPage
