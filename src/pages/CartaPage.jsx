@@ -26,8 +26,8 @@ function CartaPage() {
   if (error) return <p className='bg-red-100 text-red-500 m-4'>Error: {error}</p>;
 
   return (
-    <div>
-      <h1 className="text-2xl text-yellow-300 font-bold mb-3 m-4">Carta del Restaurante</h1>
+    <div className='m-10'>
+      <h1 className="bg-blue-400 text-white text-2xl font-bold p-2 rounded-xl mb-2">Carta del Restaurante</h1>
       <ul>
         {platos.map(plato => (
           <PlatoCard
