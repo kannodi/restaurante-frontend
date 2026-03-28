@@ -4,10 +4,12 @@ import NavBar from './components/NavBar'
 import ComandasPages from './pages/ComandasPage'
 import CarritoPage from './pages/CarritoPage'
 import MenuPage from './pages/MenuPage'
+import LoginPage from './pages/LoginPage'
 function App() {
   return (
     <div>
       <NavBar />
+      <LoginPage />
       <CartaPage />
       <MenuPage />
       <CarritoPage />
