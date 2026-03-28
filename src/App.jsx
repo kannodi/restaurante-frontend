@@ -8,11 +8,11 @@ function App() {
   return (
     <div>
       <NavBar />
+      <MenuPage />
       <CarritoPage />
       <Home />
       <MesasPage />
       <ComandasPages />
-      <MenuPage />
     </div>
   )
 }
