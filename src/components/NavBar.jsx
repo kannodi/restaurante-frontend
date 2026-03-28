@@ -3,13 +3,13 @@ function NavBar({ nombreRestaurante = "Restaurante Raul" }) {
     return (
         <>
             <header>
-                <h1 className='text-black' align='center' width='100%' height='100%'>{nombreRestaurante}</h1>
+                <h1 className='text-yellow-400 text-4xl p-7' align='center' width='100%' height='100%'>{nombreRestaurante}</h1>
             </header>
-            <nav>
-                <ul>
-                    <li><a href="#">Carta</a></li>
-                    <li><a href="#">Mesas</a></li>
-                    <li><a href="#">Comandas</a></li>
+            <nav className="flex flex-col">
+                <ul className=' bg-white mt-2'>
+                    <span className=" bg-blue-200 text-blue-400 font-bold text-xl rounded-full px-1 py-1 w-fit "><a href="#">Carta</a></span>
+                    <span className=" bg-blue-200 text-blue-400 font-bold text-xl rounded-full px-1 py-1 w-fit "><a href="#">Mesas</a></span>
+                    <span className=" bg-blue-200 text-blue-400 font-bold text-xl rounded-full px-1 py-1 w-fit "><a href="#">Comandas</a></span>
                 </ul>
             </nav>
         </>

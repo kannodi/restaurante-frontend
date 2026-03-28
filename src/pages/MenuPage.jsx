@@ -29,7 +29,7 @@ export default function MenuPage() {
             <h2 className="text-2xl text-yellow-300 font-bold mb-3">Menú del Restaurante</h2>
             {platos.map(plato => (
                 <div className='grid grid-cols-4' key={plato._id}>
-                    <strong>{plato.nombre}</strong> <span className='bg-blue-100 rounded-full px-1 py-1 text-blue-500 w-fit'>{plato.categoria}</span> <span className='text-green-600 font-semibold text-lg'>— S/ {plato.precio}</span> <span className={`text-xs font-medium px-2 py-1 rounded-full w-fit ${plato.stock > 0
+                    <strong>{plato.nombre}</strong> <span className='bg-blue-100 rounded-full  text-blue-500 w-fit'>{plato.categoria}</span> <span className='text-green-600 font-semibold text-lg'>— S/ {plato.precio}</span> <span className={`text-xs font-medium px-2 py-1 rounded-full w-fit ${plato.stock > 0
                         ? 'bg-green-100 text-green-700'
                         : 'bg-red-100 text-red-500'
                         }`}>
