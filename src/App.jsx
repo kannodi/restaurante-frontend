@@ -8,7 +8,7 @@ import MenuPage from './pages/MenuPage'
 import LoginPage from './pages/LoginPage'
 import { Navigate } from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute'//
-import Ordentest from './pages/Ordentest'
+import PedidoTest from './pages/pedidotest'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <NavBar />
       <Routes>
         {/* Ruta por defecto */}
-        <Route path="/" element={<Ordentest />} />
+        <Route path="/" element={<PedidoTest />} />
       </Routes>
     </BrowserRouter>
   )

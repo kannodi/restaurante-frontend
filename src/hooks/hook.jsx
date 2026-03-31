@@ -11,3 +11,5 @@ class OrderForm extends React.Component {
         return <div>{this.state.mesa}</div>;
     }
 }
+
+export default OrderForm;   
