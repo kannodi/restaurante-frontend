@@ -6,8 +6,8 @@ import ComandasPages from './pages/ComandasPage'
 import CarritoPage from './pages/CarritoPage'
 import MenuPage from './pages/MenuPage'
 import LoginPage from './pages/LoginPage'
-import ProtectedRoute from './components/ProtectedRoute'
 import { Navigate } from 'react-router-dom'
+import ProtectedRoute from './components/ProtectedRoute'//
 
 
 function App() {
