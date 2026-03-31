@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { login } from '../services/api';
+import { useNavigate } from 'react-router-dom';
+const navigate = useNavigate();
+
 
 export default function LoginPage() {
     const [email, setEmail] = useState('');
@@ -16,6 +19,7 @@ export default function LoginPage() {
             localStorage.setItem('token', data.token);
             console.log('Login exitoso — token guardado');
             alert('¡Bienvenido al sistema!');  // temporal — Bloque B lo reemplaza
+            navigate('/menu');
         } catch (err) {
             setError(err.response?.data?.message || 'Credenciales incorrectas');
         } finally {
