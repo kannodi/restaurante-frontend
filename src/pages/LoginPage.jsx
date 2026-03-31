@@ -1,14 +1,27 @@
 import { useState } from 'react';
+import { login } from '../services/api';
 
 export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        console.log('Login:', email, password);
+        setLoading(true);
+        setError('');
+        try {
+            const data = await login(email, password);
+            localStorage.setItem('token', data.token);
+            console.log('Login exitoso — token guardado');
+            alert('¡Bienvenido al sistema!');  // temporal — Bloque B lo reemplaza
+        } catch (err) {
+            setError(err.response?.data?.message || 'Credenciales incorrectas');
+        } finally {
+            setLoading(false);
+        }
     }
-
     return (
         <div className='min-h-screen bg-gradient-to-br from-blue-300 to-yellow-300 flex items-center justify-center'>
             <div className='bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm'>
@@ -30,11 +43,14 @@ export default function LoginPage() {
                             className='w-full mt-1 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500' />
                     </div>
                     <button type='submit'
-                        className='w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors mt-2 active:scale-90 active:bg-blue-800'>
-                        Ingresar al sistema
+                        disabled={loading}
+                        className='w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors mt-2 active:scale-90 active:bg-blue-800' >
+                        {loading ? 'Ingresando...' : 'Ingresar al sistema'}
                     </button>
+                    {error && <p className='text-red-500 mt-3 text-center'>{error}</p>}
                 </form>
             </div>
         </div>
     );
 }
+
