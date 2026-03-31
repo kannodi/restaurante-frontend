@@ -8,7 +8,7 @@ import MenuPage from './pages/MenuPage'
 import LoginPage from './pages/LoginPage'
 import { Navigate } from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute'//
-
+import Ordentest from './pages/Ordentest'
 
 function App() {
   return (
@@ -16,13 +16,7 @@ function App() {
       <NavBar />
       <Routes>
         {/* Ruta por defecto */}
-        <Route path="/" element={<Navigate to='/login' replace />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/carta" element={<ProtectedRoute><CartaPage /></ProtectedRoute>} />
-        <Route path="/menu" element={<ProtectedRoute><MenuPage /></ProtectedRoute>} />
-        <Route path="/carrito" element={<ProtectedRoute><CarritoPage /></ProtectedRoute>} />
-        <Route path="/mesas" element={<ProtectedRoute><MesasPage /></ProtectedRoute>} />
-        <Route path="/comandas" element={<ProtectedRoute><ComandasPages /></ProtectedRoute>} />
+        <Route path="/" element={<Ordentest />} />
       </Routes>
     </BrowserRouter>
   )
