@@ -4,7 +4,7 @@ const menuRouter = require('./routes/menu.routes');
 const logger = require('./middlewares/logger');
 const conectarDB = require('./database/connection');
 const authRouter = require('./routes/auth.routes');
-import cors from 'cors'
+const cors = require('cors');
 const app = express();
 
 app.use(cors())
@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'test') {
     conectarDB();
 }
 
-const {port} = require('./config');
+const { port } = require('./config');
 
 app.use(express.json());
 app.use(logger); // ← se ejecuta en TODAS las peticiones
