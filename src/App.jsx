@@ -13,6 +13,7 @@ import ProtectedRoute from './components/ProtectedRoute'//
 function App() {
   return (
     <BrowserRouter>
+      <NavBar />
       <Routes>
         {/* Ruta por defecto */}
         <Route path="/" element={<Navigate to='/login' replace />} />
