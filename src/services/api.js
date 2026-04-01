@@ -50,6 +50,10 @@ export async function login(email, password) {
     const response = await axios.post(`${BASE_URL}/auth/login`, {
         email,
         password
+    }, {
+        headers: {
+            'ngrok-skip-browser-warning': 'true'
+        }
     });
     return response.data;
 }
