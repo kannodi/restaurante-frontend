@@ -7,7 +7,15 @@ const authRouter = require('./routes/auth.routes');
 const cors = require('cors');
 const app = express();
 
-app.use(cors())
+const corsOptions = {
+    origin: true,
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 if (process.env.NODE_ENV !== 'test') {
     conectarDB();
