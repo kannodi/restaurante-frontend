@@ -46,7 +46,7 @@ export async function getPlatos() {
 
 // login SIGUE USANDO `axios` directo -> No necesita token para mandar correo/password
 export async function login(email, password) {
-    // Aquí sí ponemos la URL completa porque no usamos la instancia
+    console.log('BASE_URL:', BASE_URL);
     const response = await axios.post(`${BASE_URL}/auth/login`, {
         email,
         password
