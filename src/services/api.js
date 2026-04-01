@@ -36,7 +36,7 @@ api.interceptors.response.use(
 // getPlatos AHORA USA `api` -> El interceptor le pondrá el token automáticamente
 export async function getPlatos() {
     // Como la instancia ya tiene baseURL, solo ponemos la ruta relativa ('/menu')
-    const response = await api.get('menu', {
+    const response = await api.get('/menu', {
         headers: {
             'ngrok-skip-browser-warning': 'true'
         }
@@ -47,7 +47,7 @@ export async function getPlatos() {
 // login SIGUE USANDO `axios` directo -> No necesita token para mandar correo/password
 export async function login(email, password) {
     // Aquí sí ponemos la URL completa porque no usamos la instancia
-    const response = await axios.post(`${BASE_URL}auth/login`, {
+    const response = await axios.post(`${BASE_URL}/auth/login`, {
         email,
         password
     });
