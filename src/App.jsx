@@ -13,7 +13,6 @@ import CarritoPage from './pages/CarritoPage'
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
       <Routes>
         {/* Ruta por defecto */}
         <Route path="/" element={<Navigate to='/login' replace />} />
