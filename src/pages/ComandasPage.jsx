@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { mesasMock } from '../data/mesas.mock.js';
 import OrderForm from '../components/OrderForm';
-import NavBar from '../components/NavBar';
 const ComandasPages = () => {
     // Usamos un estado para recordar qué mesa seleccionó el mesero [cite: 893-894]
     const [mesaSeleccionada, setMesaSeleccionada] = useState(mesasMock[0].numero);
